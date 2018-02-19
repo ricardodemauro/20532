@@ -19,3 +19,8 @@ https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions
 Azure Marketplace
 
 https://azuremarketplace.microsoft.com/pt-br/marketplace/apps/category/compute?subcategories=virtual-machine-images&page=1
+
+
+Labs
+
+https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions/tree/c-release/Instructions/Labs/dotnet
