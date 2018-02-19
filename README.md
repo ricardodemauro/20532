@@ -10,3 +10,7 @@ https://azure.microsoft.com/pt-br/pricing/details/virtual-machines/linux/
 
 Calculadora
 https://azure.microsoft.com/pt-br/pricing/calculator
+
+Labs e demos
+
+https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions
