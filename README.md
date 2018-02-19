@@ -14,3 +14,8 @@ https://azure.microsoft.com/pt-br/pricing/calculator
 Labs e demos
 
 https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions
+
+
+Azure Marketplace
+
+https://azuremarketplace.microsoft.com/pt-br/marketplace/apps/category/compute?subcategories=virtual-machine-images&page=1
