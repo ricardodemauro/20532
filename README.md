@@ -6,3 +6,7 @@ http://hostingadvice.digitalbrandsinc.netdna-cdn.com/wp-content/uploads/2017/05/
 
 
 https://azure.microsoft.com/pt-br/pricing/details/virtual-machines/linux/
+
+
+Calculadora
+https://azure.microsoft.com/pt-br/pricing/calculator
