@@ -26,3 +26,6 @@ https://azure.microsoft.com/en-us/features/storage-explorer/
 
 Azure Cloud Patterns
 https://docs.microsoft.com/pt-br/azure/architecture/patterns/
+
+SQL Azure vs SQL Virtual Machine
+https://azure.microsoft.com/pt-br/blog/data-series-sql-server-in-windows-azure-virtual-machine-vs-sql-database/
