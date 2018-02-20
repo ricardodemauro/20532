@@ -23,3 +23,6 @@ https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions/tre
 
 Storage Explorer
 https://azure.microsoft.com/en-us/features/storage-explorer/
+
+Azure Cloud Patterns
+https://docs.microsoft.com/pt-br/azure/architecture/patterns/
