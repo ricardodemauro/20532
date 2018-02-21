@@ -29,3 +29,9 @@ https://docs.microsoft.com/pt-br/azure/architecture/patterns/
 
 SQL Azure vs SQL Virtual Machine
 https://azure.microsoft.com/pt-br/blog/data-series-sql-server-in-windows-azure-virtual-machine-vs-sql-database/
+
+Service Bus Relay
+https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-what-is-it
+
+Service Bus queues, topics, and subscriptions
+https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions
