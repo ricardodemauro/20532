@@ -1,6 +1,6 @@
 # Turma 20532 - BfBiz
 
-Senha Maquina Japones@
+Senha - Japones@
 
 **Úteis**
 
