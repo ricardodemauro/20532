@@ -12,6 +12,9 @@ https://azure.microsoft.com/pt-br/pricing/details/virtual-machines/linux/
 Calculadora
 https://azure.microsoft.com/pt-br/pricing/calculator
 
+Web Platform Installer
+https://www.microsoft.com/web/downloads/platform.aspx
+
 **Labs e demos**
 https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions
 
