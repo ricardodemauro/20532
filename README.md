@@ -35,3 +35,9 @@ https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-what-is-it
 
 Service Bus queues, topics, and subscriptions
 https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions
+
+Azure Powershell - getting started
+https://docs.microsoft.com/pt-br/powershell/azure/get-started-azureps?view=azurermps-5.3.0
+
+Get-AzurePublishSettings
+https://docs.microsoft.com/en-us/powershell/module/azure/get-azurepublishsettingsfile?view=azuresmps-4.0.0
