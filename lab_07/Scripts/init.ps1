@@ -110,16 +110,16 @@ Function GetLocations() {
 
 Function SelectSubscription() {
     Write-Host -ForegroundColor Yellow -Object "Your subscriptions:"
-    Get-AzureRmSubscription | select Name, Id
+    Get-AzureRmSubscription
     
-    $subscriptionId = Read-Host -Prompt 'Subscription to use'
+    $subscriptionId = Read-Host -Prompt 'SubscriptionId to use'
 
     if($subscriptionId -eq "") {
         Write-Host -ForegroundColor Red -Object "None selected"
         return
     }
     Write-Host -Object "Selecting $($subName) - $($subscriptionId) subscription to work"
-    Select-AzureRmSubscription -Subscription $subscriptionId
+    Select-AzureRmSubscription -SubscriptionId $subscriptionId
 }
 
 Function CreateStorage($storageName, $resourceGroupName) {
@@ -130,7 +130,7 @@ Function CreateStorage($storageName, $resourceGroupName) {
         Write-Host -ForegroundColor Yellow -BackgroundColor Black "INFO Storage account $($storageName) already exists."
         return $st
     }
-    $storage = New-AzureRmStorageAccount -ResourceGroupName $resourceGroupName -Name $storageName -Location $defaultLocation -Kind Storage -EnableHttpsTrafficOnly $true -SkuName $defaultSku
+    $storage = New-AzureRmStorageAccount -ResourceGroupName $resourceGroupName -Name $storageName -Location $defaultLocation -Kind Storage -SkuName $defaultSku
     return $storage
 }
 
