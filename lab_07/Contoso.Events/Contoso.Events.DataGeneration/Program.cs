@@ -8,33 +8,48 @@ using System.Configuration;
 using System.Data.Entity;
 using System.Data.Entity.Spatial;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Contoso.Events.Data.Generation
 {
     class Program
     {
+        static string PATTERN_AZURE_CONNECTION = @"tcp:[\w\d]+.database\.windows\.net,1433";
+
         static void Main(string[] args)
         {
+            Console.WriteLine("Starting the batch");
+
             var storageAccount = CloudStorageAccount.Parse(ConfigurationManager.AppSettings["StorageConnectionString"]);
 
             var tableClient = storageAccount.CreateCloudTableClient();
             var table = tableClient.GetTableReference("EventRegistrations");
 
+            Console.WriteLine("Create table storage EventRegistrations if not exists");
             table.CreateIfNotExists();
 
             List<Registration> registrationList = new List<Registration>();
 
-            //TODO - remove this when going azure sql database
-            using (EventsContext context = new EventsContext())
+            string dbConnectionString = ConfigurationManager.ConnectionStrings["EventsContextConnectionString"].ConnectionString;
+            bool isAzureDb = Regex.IsMatch(dbConnectionString, PATTERN_AZURE_CONNECTION, RegexOptions.Compiled);
+            if (!isAzureDb)
             {
-                context.Database.Delete();
+                Console.WriteLine("Deleting sql database");
+                using (EventsContext context = new EventsContext())
+                {
+                    context.Database.Delete();
+                }
             }
+
 
             using (EventsContext context = new EventsContext())
             {
+                Console.WriteLine("Removing data from database");
+
                 context.Events.RemoveRange(context.Events);
                 context.SaveChanges();
 
+                Console.WriteLine("Adding data to database");
                 for (int i = 0; i < 55; i++)
                 {
                     var result = CreateEvent(context);
@@ -43,7 +58,7 @@ namespace Contoso.Events.Data.Generation
             }
 
             registrationList = registrationList.OrderBy(r => rand.Next()).ToList();
-
+            Console.WriteLine("adding data to table storage");
             foreach (var registrationGroup in registrationList.GroupBy(r => r.PartitionKey))
             {
                 TableBatchOperation operation = new TableBatchOperation();
