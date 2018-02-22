@@ -52,3 +52,6 @@ https://docs.microsoft.com/en-us/powershell/module/azure/get-azurepublishsetting
 
 Azure CLI
 https://github.com/Azure/azure-cli
+
+Automações comuns
+https://www.troyhunt.com/automating-web-hosting-creation-in/
