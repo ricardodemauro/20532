@@ -1,6 +1,8 @@
 # Turma 20532 - BfBiz
 
 Senha - Japones@
+Usuario Servico - student
+Senha Servico - AzurePa$$w0rd
 
 **Úteis**
 
